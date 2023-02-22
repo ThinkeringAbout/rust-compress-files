@@ -19,7 +19,7 @@ fn main() {
     let start = Instant::now();
     copy(&mut input, &mut encoder).unwrap();
     let output = encoder.finish().unwrap();
-    println!("Source len {:?}", input.get_ref().metadata().unwrap().len());
-    println!("Output len {:?}", output.metadata().unwrap().len());
+    println!("До {:?}", input.get_ref().metadata().unwrap().len());
+    println!("После {:?}", output.metadata().unwrap().len());
     println!("Потрачено {:?}", start.elapsed());
 }
